@@ -1,0 +1,68 @@
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+}
+header {
+    background-image: url('https://i.postimg.cc/90VJr92K/hero.jpg'); /* Background image for header */
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed; /* Keep the background fixed while scrolling */
+    color: black;
+    padding: 10px 20px;
+    position: relative;
+}
+header nav a {
+    color: white; /* Change link color to white for visibility */
+    margin: 0 15px;
+    text-decoration: none;
+}
+
+.heading1 {
+    font-size: 50px;
+}
+
+.hero {
+    background-image: url('https://i.postimg.cc/90VJr92K/hero.jpg');
+    background-size: cover;
+    background-position: center;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    text-align: center;
+    position: relative;
+}
+
+.hero::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0, 0, 0, 0.5); /* Dark overlay */
+    z-index: 1; /* Ensure this is below the content */
+}
+
+.hero-content {
+    position: relative; /* Ensure content is above the overlay */
+    z-index: 2; /* Set a higher z-index to ensure text is above the overlay */
+    padding: 20px;
+    border-radius: 10px;
+}
+
+.hero-content h1 {
+    background-image: url('https://i.postimg.cc/90VJr92K/hero.jpg'); /* Use the same background image */
+    background-size: cover;
+    background-position: center;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    text-fill-color: transparent;
+    font-size: 120px; /* Ensure the font size is set */
+}
+
+.hero-content p {
+    color: rgba(255, 255, 255, 0.8); /* Keep the paragraph text white for readability */
+}
